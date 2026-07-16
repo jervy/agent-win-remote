@@ -1,7 +1,7 @@
 # Agent Win Remote
 
-用于服务器、家庭网络和开发环境的 Windows 远程管理方案。
-原理是通过 PowerShell HTTP Agent 和 Chisel 反向隧道实现远程管理Windows目的，不提供 GUI （图形化）远程桌面。
+本项目是通过 Agent脚本 和 Chisel 反向隧道，实现agent自主管理和运维windows PowerShell为目的而创建的，本项目不提供 GUI （图形化）远程桌面。
+管理端部署好后，Windows （被控端）只需要执行一段终端命令下载启动脚本，手动启动服务即可开始远控（不写注册表和自启动，不做持久化，不依赖系统服务，无需被控端有公网IP）
 
 ## 工作方式
 
@@ -10,7 +10,7 @@
 - 中继服务器通过反向端口访问 Windows Agent
 - 管理接口使用 Bearer Token
 - 简单命令使用 `/run`，完整脚本使用 `/stdin-run`
-- 不安装 Windows 服务，不写注册表自启动，不做持久化
+
 
 ```text
 管理端 / Linux
