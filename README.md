@@ -1,8 +1,7 @@
 # Agent Win Remote
 
-用于服务器、家庭网络和开发环境的 Windows 临时远程管理方案。它通过 PowerShell HTTP Agent 和 Chisel 反向隧道访问 Windows，不提供 GUI 远程桌面或交互式终端。
-
-仅限管理你拥有或明确获授权的设备。
+用于服务器、家庭网络和开发环境的 Windows 远程管理方案。
+原理是通过 PowerShell HTTP Agent 和 Chisel 反向隧道实现远程管理Windows目的，不提供 GUI （图形化）远程桌面。
 
 ## 工作方式
 
@@ -202,18 +201,6 @@ agent-win-remote/
 
 反向隧道避免开放 Windows 公网入站端口，也不要求家庭路由器配置端口转发，适合 NAT 和动态 IP 环境。OpenSSH 用于管理 Linux 中继服务器，Chisel 负责转发到 Windows；Agent 则以 HTTP/JSON 形式返回自动化结果。
 
-## 安全边界
-
-这是一个具备远程 PowerShell 执行能力的管理工具，风险较高。当前设计包括：
-
-- Agent 仅监听 `127.0.0.1`
-- 管理接口使用 Bearer Token
-- `/stdin-run` 限制脚本、超时和输出大小
-- 脚本写入临时目录后执行
-- 不提供交互式终端、PTY 或 WebSocket Shell
-- 不安装服务、不设置持久化自启动
-
-请妥善保护 Token 和中继服务器，只在授权设备上使用。
 
 ## 故障排查
 
