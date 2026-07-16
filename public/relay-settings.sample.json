@@ -1,0 +1,23 @@
+{
+  "server_url": "http://192.0.2.44:28271",
+  "chisel_auth": "CHANGE_ME_CHISEL_USER:CHANGE_ME_CHISEL_PASSWORD",
+  "agent_token": "CHANGE_ME_LONG_RANDOM_AGENT_TOKEN",
+  "server_port": 28271,
+  "remote_port": 19101,
+  "local_agent_port": 18888,
+  "max_output_bytes": 1048576,
+  "max_text_upload_bytes": 5242880,
+  "max_download_bytes": 5242880,
+  "default_timeout": 30,
+  "max_stdin_run_bytes": 1048576,
+  "stdin_run_default_timeout": 120,
+  "stdin_run_max_timeout": 300,
+  "log_dir": "$env:TEMP\\hermes-win-agent\\logs",
+  "hosts": {
+    "win-lab-a": {
+      "name": "Windows Lab A",
+      "remote_port": 19101,
+      "local_agent_port": 18888
+    }
+  }
+}

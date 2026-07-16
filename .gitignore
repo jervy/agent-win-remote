@@ -1,0 +1,40 @@
+# 私有配置和运行时文件
+public/relay-settings.json
+relay-secrets/
+
+# 运行日志和状态
+logs/*
+!logs/.gitkeep
+*.log
+*.pid
+*.stdout.txt
+*.stderr.txt
+
+# Windows 临时文件
+*.tmp
+*.bak
+Thumbs.db
+Desktop.ini
+
+# 开发环境
+.vscode/
+.idea/
+__pycache__/
+
+# 本地测试输出
+reports/
+test-output/
+public/test-*.bin
+
+# 凭据和密钥
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+.env
+.env.*
+
+# OS files
+.DS_Store
