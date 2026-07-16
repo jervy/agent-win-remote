@@ -30,7 +30,7 @@ cp public/relay-settings.sample.json relay-secrets/relay-settings.json
 chmod 600 relay-secrets/relay-settings.json
 ```
 
-注意：启动脚本支持 `HERMES_CONFIG` 环境变量。不要把含真实凭据的配置放入公开静态文件目录。
+注意：启动脚本支持 `AGENT_CONFIG` 环境变量。不要把含真实凭据的配置放入公开静态文件目录。
 
 ## 二、配置中继服务器端 Chisel Server
 
@@ -39,7 +39,7 @@ chmod 600 relay-secrets/relay-settings.json
 ```bash
 cp public/relay-settings.sample.json relay-secrets/relay-settings.json
 chmod 600 relay-secrets/relay-settings.json
-export HERMES_CONFIG="$PWD/relay-secrets/relay-settings.json"
+export AGENT_CONFIG="$PWD/relay-secrets/relay-settings.json"
 ```
 
 编辑私有 `relay-settings.json`：

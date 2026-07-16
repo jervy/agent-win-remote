@@ -44,7 +44,7 @@ check "server/start-chisel-server.sh 存在" test -f "$PROJECT_ROOT/server/start
 
 echo ""
 echo "配置检查:"
-CONFIG="${HERMES_CONFIG:-$PROJECT_ROOT/relay-secrets/relay-settings.json}"
+CONFIG="${AGENT_CONFIG:-$PROJECT_ROOT/relay-secrets/relay-settings.json}"
 check "relay-settings.json 可解析" jq . "$CONFIG"
 check "server_port 字段存在" jq -e .server_port "$CONFIG"
 check "remote_port 字段存在" jq -e .remote_port "$CONFIG"

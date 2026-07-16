@@ -105,7 +105,7 @@ cd agent-win-remote
 mkdir -p relay-secrets
 cp public/relay-settings.sample.json relay-secrets/relay-settings.json
 chmod 600 relay-secrets/relay-settings.json
-export HERMES_CONFIG="$PWD/relay-secrets/relay-settings.json"
+export AGENT_CONFIG="$PWD/relay-secrets/relay-settings.json"
 ```
 
 编辑私有配置中的 `server_url`、认证信息和端口映射。文档示例为：
@@ -131,12 +131,12 @@ win-test-c:       192.0.2.44:19103
 
 ```bash
 chmod +x server/*.sh bin/chisel
-export HERMES_CONFIG=/opt/agent-win-remote/relay-secrets/relay-settings.json
+export AGENT_CONFIG=/opt/agent-win-remote/relay-secrets/relay-settings.json
 bash server/start-chisel-server.sh
 bash server/status.sh
 ```
 
-启动脚本从 `HERMES_CONFIG` 指定的私有配置读取认证信息。它不会把完整认证字符串打印到终端。
+启动脚本从 `AGENT_CONFIG` 指定的私有配置读取认证信息。它不会把完整认证字符串打印到终端。
 
 ### 3. 准备 Windows 文件
 

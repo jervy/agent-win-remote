@@ -5,7 +5,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-CONFIG="${HERMES_CONFIG:-$PROJECT_ROOT/relay-secrets/relay-settings.json}"
+CONFIG="${AGENT_CONFIG:-$PROJECT_ROOT/relay-secrets/relay-settings.json}"
 PID_FILE="$PROJECT_ROOT/logs/chisel-server.pid"
 LOG_FILE="$PROJECT_ROOT/logs/chisel-server.log"
 

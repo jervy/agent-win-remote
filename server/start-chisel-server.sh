@@ -6,7 +6,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 # Read configuration from a private path when provided; fall back to the local file.
-CONFIG="${HERMES_CONFIG:-$PROJECT_ROOT/relay-secrets/relay-settings.json}"
+CONFIG="${AGENT_CONFIG:-$PROJECT_ROOT/relay-secrets/relay-settings.json}"
 if [[ ! -f "$CONFIG" ]]; then
     echo "配置文件不存在: $CONFIG" >&2
     exit 1
